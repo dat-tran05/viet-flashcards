@@ -1,0 +1,1062 @@
+/* Built-in sets: 140A — Fall 2026 (extracted from Quizlet PDFs). Loaded on first run;
+   "Add built-in sets" on the home page re-adds any you deleted. Regenerate with tools/quizlet_pdf_extract.py. */
+window.SEED_SETS = [
+ {
+  "id": "seed-tieng-viet-ngon-ngu-ket-noi-cac-the-he",
+  "name": "Tiếng Việt - Ngôn ngữ kết nối các thế hệ",
+  "frontLang": "en",
+  "backLang": "vi",
+  "createdAt": 1794250805000,
+  "updatedAt": 1794250805000,
+  "cards": [
+   {
+    "id": "seed-tieng-viet-n-0",
+    "front": "to cooperate, collaborate",
+    "back": "hợp tác",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-1",
+    "front": "project",
+    "back": "dự án (n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-2",
+    "front": "field, area",
+    "back": "lĩnh vực (n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-3",
+    "front": "to enhance, to raise",
+    "back": "nâng cao (v)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-4",
+    "front": "fellow people",
+    "back": "đồng bào (n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-5",
+    "front": "Even though",
+    "back": "Dù là...",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-6",
+    "front": "to interact",
+    "back": "tiếp xúc (v)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-7",
+    "front": "by chance",
+    "back": "tình cờ",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-8",
+    "front": "local/ regions",
+    "back": "địa phương (a/n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-9",
+    "front": "way of expression",
+    "back": "cách diễn tả (n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-10",
+    "front": "to be forced/ mandatory/ compulsory",
+    "back": "bắt buộc",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-11",
+    "front": "somewhere",
+    "back": "ở đâu đó (phrase)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-12",
+    "front": "root/ origin",
+    "back": "cội nguồn (n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-13",
+    "front": "concurrently",
+    "back": "thì đồng thời (phrase)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-14",
+    "front": "vivid, lively",
+    "back": "sinh động (a)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-15",
+    "front": "mother tongue",
+    "back": "tiếng mẹ đẻ (n)\nngôn ngữ mẹ đẻ (n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-16",
+    "front": "to prove yourself",
+    "back": "khẳng định bản thân",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-17",
+    "front": "overseas Vietnamese",
+    "back": "kiều bào (n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-18",
+    "front": "livelihood",
+    "back": "sinh kế / kế sinh nhai",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-tieng-viet-n-19",
+    "front": "agriculture / agricultural",
+    "back": "nông nghiệp (a/n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   }
+  ]
+ },
+ {
+  "id": "seed-viec-su-dung-tieng-long",
+  "name": "Việc sử dụng tiếng lóng",
+  "frontLang": "en",
+  "backLang": "vi",
+  "createdAt": 1794250804000,
+  "updatedAt": 1794250804000,
+  "cards": [
+   {
+    "id": "seed-viec-su-dung-0",
+    "front": "slang words",
+    "back": "từ lóng / tiếng lóng",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-1",
+    "front": "(v) to expect\n(N) expectation",
+    "back": "kỳ vọng (v)\nkỳ vọng (n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-2",
+    "front": "to orientate/ orientation",
+    "back": "định hướng (n/v)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-3",
+    "front": "stable/ to stabilize",
+    "back": "ổn định (a/v)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-4",
+    "front": "despressed",
+    "back": "trầm cảm (a) - chầm kẽm (lóng)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-5",
+    "front": "bad luck/ unlucky",
+    "back": "xui xẻo (a) - xu cà na (lóng)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-6",
+    "front": "nonsense",
+    "back": "vớ vẩn - bà láp bà xàm (lóng)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-7",
+    "front": "roundabout",
+    "back": "vòng xoay - bùng binh (lóng)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-8",
+    "front": "embarrassed",
+    "back": "xấu hổ (a) - quê (lóng)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-9",
+    "front": "to produce, manufacture",
+    "back": "sản xuất (v)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-10",
+    "front": "an expert",
+    "back": "chuyên gia (n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-11",
+    "front": "to synthesize",
+    "back": "tổng hợp",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-12",
+    "front": "standard/ norm",
+    "back": "chuẩn mực",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-13",
+    "front": "goal, purpose, objective",
+    "back": "mục đích (n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-14",
+    "front": "young people, youth",
+    "back": "giới trẻ (n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-15",
+    "front": "circumstance, scenario, situation",
+    "back": "tình huống (n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-16",
+    "front": "context / setting",
+    "back": "bối cảnh / ngữ cảnh",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-17",
+    "front": "principle, rule",
+    "back": "nguyên tắc (n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-18",
+    "front": "an indispensable part",
+    "back": "một phần không thể thiếu",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-19",
+    "front": "the purity of Vietnamese language",
+    "back": "sự trong sáng của tiếng Việt",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-20",
+    "front": "to keep up with the trends",
+    "back": "bắt kịp xu hướng / bắt trend",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-21",
+    "front": "attitude",
+    "back": "thái độ (n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-22",
+    "front": "secret code",
+    "back": "mật mã (n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-23",
+    "front": "similar to",
+    "back": "tương tự như",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-24",
+    "front": "to imply",
+    "back": "ám chỉ (v)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-25",
+    "front": "without restraint/ control",
+    "back": "thiếu kiểm soát",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-26",
+    "front": "straightforward / frank",
+    "back": "thẳng thắn (a)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-27",
+    "front": "mindfully careful",
+    "back": "thận trọng / cẩn trọng",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-28",
+    "front": "to admit",
+    "back": "thừa nhận (v)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-29",
+    "front": "confused",
+    "back": "bối rối (a)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-viec-su-dung-30",
+    "front": "accidentally",
+    "back": "vô tình (adv)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   }
+  ]
+ },
+ {
+  "id": "seed-nhac-tre-o-viet-nam-ca-si-hieuthuhai",
+  "name": "Nhạc trẻ ở Việt Nam - Ca sĩ HIEUTHUHAI",
+  "frontLang": "en",
+  "backLang": "vi",
+  "createdAt": 1794250803000,
+  "updatedAt": 1794250803000,
+  "cards": [
+   {
+    "id": "seed-nhac-tre-o-v-0",
+    "front": "energetic/ full of energy",
+    "back": "giàu năng lượng (a)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-1",
+    "front": "vibrant, bright, radiant",
+    "back": "rực rỡ (a)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-2",
+    "front": "reduplicative words",
+    "back": "từ láy (n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-3",
+    "front": "to try out",
+    "back": "thử sức (v)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-4",
+    "front": "wordplay by reversing sounds in Vietnamese",
+    "back": "nói lái / đọc lái",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-5",
+    "front": "gang",
+    "back": "băng đảng (n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-6",
+    "front": "nerd/ bookworm",
+    "back": "mọt sách (n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-7",
+    "front": "handsome",
+    "back": "điển trai (n) = đẹp trai",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-8",
+    "front": "to make a mark / to leave an impression",
+    "back": "ghi dấu ấn",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-9",
+    "front": "to release / to launch",
+    "back": "cho ra mắt",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-10",
+    "front": "chart / ranking",
+    "back": "bảng xếp hạng",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-11",
+    "front": "champion / winner",
+    "back": "quán quân",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-12",
+    "front": "dedicated / devoted",
+    "back": "tận tâm / tận tuỵ",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-13",
+    "front": "reputation / fame",
+    "back": "danh tiếng",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-14",
+    "front": "to simplify",
+    "back": "đơn giản hoá (v)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-15",
+    "front": "make it complicated",
+    "back": "phức tạp hoá (v)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-16",
+    "front": "algorithm",
+    "back": "thuật toán",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-17",
+    "front": "digital age",
+    "back": "thời đại số",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-18",
+    "front": "obviously",
+    "back": "lẽ dĩ nhiên",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-19",
+    "front": "to compete / competition",
+    "back": "cạnh tranh (n/v)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-20",
+    "front": "better luck than good",
+    "back": "\"hay không bằng hên\"",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-21",
+    "front": "independent",
+    "back": "tự lập (a)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-22",
+    "front": "personal image",
+    "back": "hình ảnh cá nhân",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-23",
+    "front": "song (formal)",
+    "back": "ca khúc",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-nhac-tre-o-v-24",
+    "front": "to stand on your own two feet",
+    "back": "tự đứng trên đôi chân của mình",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   }
+  ]
+ },
+ {
+  "id": "seed-du-an-chiec-non-ke-chuyen",
+  "name": "Dự án: Chiếc nón kể chuyện",
+  "frontLang": "en",
+  "backLang": "vi",
+  "createdAt": 1794250802000,
+  "updatedAt": 1794250802000,
+  "cards": [
+   {
+    "id": "seed-du-an-chiec--0",
+    "front": "to design; design",
+    "back": "thiết kế (verb/noun)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--1",
+    "front": "outline",
+    "back": "dàn ý",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--2",
+    "front": "to create / draft an outline",
+    "back": "lập dàn ý",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--3",
+    "front": "content",
+    "back": "nội dung",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--4",
+    "front": "to illustrate / illustration",
+    "back": "minh hoạ (v/n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--5",
+    "front": "feedback",
+    "back": "phản hồi",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--6",
+    "front": "to draft",
+    "back": "phác thảo",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--7",
+    "front": "quote / cite / quotation",
+    "back": "trích dẫn (v/n)",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--8",
+    "front": "deadline, due day",
+    "back": "hạn chót",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--9",
+    "front": "to complete",
+    "back": "hoàn thiện = hoàn thành",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--10",
+    "front": "background music",
+    "back": "nhạc nền",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--11",
+    "front": "to present",
+    "back": "trình bày",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--12",
+    "front": "to evaluate",
+    "back": "đánh giá",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--13",
+    "front": "process",
+    "back": "quá trình",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--14",
+    "front": "organizing committee / production team",
+    "back": "ban tổ chức",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--15",
+    "front": "a performance",
+    "back": "tiết mục / màn biểu diễn / màn trình diễn",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--16",
+    "front": "folklore / folk",
+    "back": "dân gian",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--17",
+    "front": "folk song",
+    "back": "dân ca",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--18",
+    "front": "to inject a fresh perspective (lit. blow a fresh brezze)",
+    "back": "thổi làn gió mới",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-du-an-chiec--19",
+    "front": "teammate",
+    "back": "đồng đội",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   }
+  ]
+ },
+ {
+  "id": "seed-chuong-trinh-truyen-hinh-thuc-te-meeting",
+  "name": "Chương trình truyền hình thực tế (Meeting 9.11.2026)",
+  "frontLang": "en",
+  "backLang": "vi",
+  "createdAt": 1794250801000,
+  "updatedAt": 1794250801000,
+  "cards": [
+   {
+    "id": "seed-chuong-trinh-0",
+    "front": "soft resistance",
+    "back": "kháng cự mềm",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-chuong-trinh-1",
+    "front": "political activism",
+    "back": "vận động chính trị",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-chuong-trinh-2",
+    "front": "to assert",
+    "back": "khẳng định",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-chuong-trinh-3",
+    "front": "right",
+    "back": "quyền",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-chuong-trinh-4",
+    "front": "freedom",
+    "back": "tự do",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-chuong-trinh-5",
+    "front": "expression",
+    "back": "biểu đạt",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-chuong-trinh-6",
+    "front": "message",
+    "back": "thông điệp",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-chuong-trinh-7",
+    "front": "harsh/ strong/ fierce",
+    "back": "gay gắt",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-chuong-trinh-8",
+    "front": "gradually",
+    "back": "dần dần",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-chuong-trinh-9",
+    "front": "attitude",
+    "back": "thái độ",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-chuong-trinh-10",
+    "front": "curious",
+    "back": "tò mò",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-chuong-trinh-11",
+    "front": "participate",
+    "back": "tham gia",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-chuong-trinh-12",
+    "front": "indirectly",
+    "back": "không trực tiếp",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-chuong-trinh-13",
+    "front": "norms, standards",
+    "back": "các chuẩn mực",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-chuong-trinh-14",
+    "front": "compromise",
+    "back": "thỏa hiệp",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   },
+   {
+    "id": "seed-chuong-trinh-15",
+    "front": "existing",
+    "back": "hiện có",
+    "starred": false,
+    "right": 0,
+    "wrong": 0,
+    "lastWrong": false
+   }
+  ]
+ }
+];
