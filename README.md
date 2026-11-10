@@ -2,7 +2,7 @@
 
 A small, fast, offline alternative to Quizlet. You can make sets with a front and back for each card, study with flashcards, practise by typing your answers in Vietnamese, take tests, and edit any card whenever you need to.
 
-**No install, no server, no internet.** Open `index.html` in Chrome, Firefox or Safari.
+**Offline, no installs.** Python 3 is all you need (it comes with macOS). Your sets are plain JSON files in `data/sets/`.
 
 It comes with the 5 sets from **140A — Fall 2026** (112 cards):
 
@@ -19,14 +19,28 @@ On every card the front is English and the back is Vietnamese. By default you're
 ## Quick start
 
 ```bash
-git clone <this repo> ~/code/personal/viet-flashcards
+cd /code/personal/viet-flashcards && ./start.sh
 ```
 
-```bash
-open ~/code/personal/viet-flashcards/index.html
+This opens http://127.0.0.1:8765 in your browser. Leave the terminal open while you study and press Ctrl+C to stop. `./start.sh` is the same as `python3 server.py`. Add `--port 9000` to use a different port, or `--no-open` if you don't want a browser to open.
+
+## Where your data lives
+
+Everything is plain JSON. There is no database.
+
+```
+data/sets/<set-id>.json   one file per set: name, languages, and cards
+                          (front, back, starred, right/wrong counts)
+data/settings.json        your study settings (not committed to git)
+data/deleted/             sets you delete are moved here, never destroyed
 ```
 
-On Linux, use `xdg-open` instead of `open`. You can bookmark the page.
+- Every edit, star and score in the app is written to these files within about a third of a second. Each file is replaced in one step, so a crash can't leave half a file behind.
+- You can edit, add or remove the JSON files by hand. Reload the page to see the changes. The file name is the set's id.
+- Commit `data/sets/` to keep your sets in git. Studying changes the right/wrong counts, so those files will change after each session.
+- The server only listens on your own computer (127.0.0.1). It rejects bad file paths and refuses writes that come from other websites.
+
+**Without the server:** if you open `index.html` directly, everything still works. In that mode it starts from `seed.js`, a copy of the sets that's built in, and saves to the browser instead of to the JSON files. After editing JSON files by hand, run `python3 tools/build_seed.py` so that copy stays up to date.
 
 ## Features
 
@@ -43,14 +57,17 @@ On Linux, use `xdg-open` instead of `open`. You can bookmark the page.
 - **Answer in** Vietnamese, English, or a random mix of both.
 - **Import** from Quizlet exports or pasted text (see below). **Backup/Restore** saves everything to a `.json` file and loads it back.
 
-Your data lives in your browser's `localStorage`. Click **⬇ Backup** now and then to keep a copy as a file. If you clear your browser data, delete a built-in set, or open the app in a different browser, **+ Add built-in sets** brings the 140A sets back.
+**⬇ Backup** downloads all sets as one `.json` file, and **⬆ Restore** loads one back. **+ Add built-in sets** brings back any of the 140A sets you deleted.
 
 ## Answer-checking rules (the edge cases)
 
-The checker is in `matcher.js` and the tests are in `tests/matcher.test.js` (87 cases). To run them:
+The checker is in `matcher.js`. There are two test files:
+
+- `tests/matcher.test.js`: 89 edge cases.
+- `tests/sets.test.js`: goes through every card in `data/sets/` and checks that typing the full answer, or any single alternative, is accepted in both directions. Currently 512 checks.
 
 ```bash
-node tests/matcher.test.js
+node tests/matcher.test.js && node tests/sets.test.js
 ```
 
 Most of these cases came from your real cards.
@@ -73,7 +90,7 @@ A hyphen inside a word (`e-mail`) does **not** separate alternatives. Commas ins
 
 | Card says | Accepted |
 | --- | --- |
-| `kỳ vọng (v)`, `địa phương (a/n)`, `ở đâu đó (phrase)`, `thiết kế (verb/noun)`, `quê (lóng)` | without the tag, or with it |
+| `kỳ vọng (v)`, `địa phương (a/n)`, `ở đâu đó (phrase)`, `thiết kế (verb/noun)`, `quê (lóng)` | without the tag, or with it (`địa phương (a/n)` typed exactly as on the card) |
 | `xe (hơi)` | `xe` or `xe hơi` |
 | `(anh/chị) khỏe không` | `khỏe không`, `anh khỏe không`, `chị khỏe không` |
 | `ăn [informal]` | `ăn`. Text in `[brackets]` is a note and is never required. |
@@ -124,19 +141,22 @@ pip install pdfplumber
 python3 tools/quizlet_pdf_extract.py set1.pdf set2.pdf out.txt
 ```
 
-Then load `out.txt` with **Import → Load .txt file**. `data/140A-fall-2026.txt` is the same data as the built-in sets, in this format.
+Then load `out.txt` with **Import → Load .txt file**. With the server running, each imported section becomes a new file in `data/sets/`. `data/140A-fall-2026.txt` is the same data as the built-in sets, in this format.
 
 ## Files
 
 ```
+start.sh       starts the app (runs server.py)
+server.py      local server: serves the app and saves sets as JSON (standard library only)
+data/sets/     your sets, one JSON file each
 index.html     page shell
 styles.css     styles (light and dark mode follow your system)
 app.js         the app: storage, routing, editor, import, flashcards, write, test
 matcher.js     answer checking (works in the browser and in Node)
-seed.js        built-in 140A sets
-data/          the same sets as a text file you can import
-tools/         Quizlet PDF → text extractor
-tests/         matcher tests
+seed.js        copy of data/sets used when there's no server (built by tools/build_seed.py)
+data/140A-fall-2026.txt   the same sets as a text file you can import
+tools/         Quizlet PDF → text extractor and seed.js builder
+tests/         matcher and whole-dataset tests
 ```
 
 ## Typing Vietnamese

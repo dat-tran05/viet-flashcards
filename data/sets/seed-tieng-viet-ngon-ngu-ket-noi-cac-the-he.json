@@ -1,0 +1,190 @@
+{
+  "id": "seed-tieng-viet-ngon-ngu-ket-noi-cac-the-he",
+  "name": "Tiếng Việt - Ngôn ngữ kết nối các thế hệ",
+  "frontLang": "en",
+  "backLang": "vi",
+  "createdAt": 1794250805000,
+  "updatedAt": 1794250805000,
+  "cards": [
+    {
+      "id": "seed-tieng-viet-n-0",
+      "front": "to cooperate, collaborate",
+      "back": "hợp tác",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-1",
+      "front": "project",
+      "back": "dự án (n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-2",
+      "front": "field, area",
+      "back": "lĩnh vực (n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-3",
+      "front": "to enhance, to raise",
+      "back": "nâng cao (v)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-4",
+      "front": "fellow people",
+      "back": "đồng bào (n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-5",
+      "front": "Even though",
+      "back": "Dù là...",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-6",
+      "front": "to interact",
+      "back": "tiếp xúc (v)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-7",
+      "front": "by chance",
+      "back": "tình cờ",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-8",
+      "front": "local/ regions",
+      "back": "địa phương (a/n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-9",
+      "front": "way of expression",
+      "back": "cách diễn tả (n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-10",
+      "front": "to be forced/ mandatory/ compulsory",
+      "back": "bắt buộc",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-11",
+      "front": "somewhere",
+      "back": "ở đâu đó (phrase)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-12",
+      "front": "root/ origin",
+      "back": "cội nguồn (n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-13",
+      "front": "concurrently",
+      "back": "thì đồng thời (phrase)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-14",
+      "front": "vivid, lively",
+      "back": "sinh động (a)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-15",
+      "front": "mother tongue",
+      "back": "tiếng mẹ đẻ (n)\nngôn ngữ mẹ đẻ (n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-16",
+      "front": "to prove yourself",
+      "back": "khẳng định bản thân",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-17",
+      "front": "overseas Vietnamese",
+      "back": "kiều bào (n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-18",
+      "front": "livelihood",
+      "back": "sinh kế / kế sinh nhai",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-tieng-viet-n-19",
+      "front": "agriculture / agricultural",
+      "back": "nông nghiệp (a/n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    }
+  ]
+}

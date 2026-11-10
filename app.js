@@ -15,31 +15,82 @@
     optionalClassifiers: false,
     autoAdvance: true,
   };
-  let db = load();
+  // Storage: with `python3 server.py` every set is a JSON file in data/sets/ (mode 'files').
+  // Opening index.html directly falls back to this browser's localStorage (mode 'local').
+  let db = { version: 1, sets: [], settings: Object.assign({}, DEFAULT_SETTINGS) };
+  let mode = 'local';
+  const snap = new Map(); // set id -> last JSON written to disk
+  let settingsSnap = '';
 
-  function load() {
+  async function init() {
+    if (location.protocol.startsWith('http')) {
+      try {
+        const r = await fetch('api/sets', { cache: 'no-store' });
+        if (r.ok) {
+          const data = await r.json();
+          const settings = await (await fetch('api/settings', { cache: 'no-store' })).json().catch(() => ({}));
+          mode = 'files';
+          db.sets = data.sets.map(normalizeSet);
+          db.settings = Object.assign({}, DEFAULT_SETTINGS, settings);
+          db.sets.forEach(s => snap.set(s.id, JSON.stringify(s)));
+          settingsSnap = JSON.stringify(db.settings);
+          if (data.errors && data.errors.length) setTimeout(() => toast('Could not read: ' + data.errors.join('; ')), 300);
+          if (!db.sets.length) { db.sets = seedSets(); save(true); }
+          return;
+        }
+      } catch (e) { /* no server: fall back to localStorage */ }
+    }
+    db = loadLocal();
+  }
+  function normalizeSet(s) {
+    return Object.assign({ frontLang: 'en', backLang: 'vi', createdAt: Date.now(), updatedAt: Date.now() }, s, {
+      cards: (s.cards || []).map(c => Object.assign({ id: uid(), front: '', back: '', starred: false, right: 0, wrong: 0, lastWrong: false }, c)),
+    });
+  }
+  function loadLocal() {
     try {
       const raw = localStorage.getItem(DB_KEY);
       if (raw) {
         const d = JSON.parse(raw);
         d.settings = Object.assign({}, DEFAULT_SETTINGS, d.settings || {});
-        d.sets = d.sets || [];
+        d.sets = (d.sets || []).map(normalizeSet);
         return d;
       }
     } catch (e) { console.error(e); }
     const seeds = seedSets();
     return { version: 1, sets: seeds.length ? seeds : [sampleSet()], settings: Object.assign({}, DEFAULT_SETTINGS) };
   }
+
   let saveTimer = null;
   function save(now) {
     clearTimeout(saveTimer);
-    const write = () => {
+    const write = mode === 'files' ? flushFiles : () => {
       try { localStorage.setItem(DB_KEY, JSON.stringify(db)); }
       catch (e) { toast('Could not save! Storage may be full — use Backup.'); }
     };
-    if (now) write(); else saveTimer = setTimeout(write, 250);
+    if (now) write(); else saveTimer = setTimeout(write, 300);
   }
-  window.addEventListener('beforeunload', () => save(true));
+  // Write only the sets that changed since the last save; move deleted ones to data/deleted/.
+  function flushFiles(keepalive) {
+    const opts = body => ({ method: 'PUT', headers: { 'Content-Type': 'application/json' }, body, keepalive: !!keepalive });
+    const fail = () => toast('⚠ Could not save to disk — is server.py still running?');
+    const live = new Set();
+    for (const s of db.sets) {
+      live.add(s.id);
+      const json = JSON.stringify(s);
+      if (snap.get(s.id) === json) continue;
+      snap.set(s.id, json);
+      fetch('api/sets/' + encodeURIComponent(s.id), opts(json)).then(r => { if (!r.ok) { snap.delete(s.id); fail(); } }).catch(() => { snap.delete(s.id); fail(); });
+    }
+    for (const id of Array.from(snap.keys())) {
+      if (live.has(id)) continue;
+      snap.delete(id);
+      fetch('api/sets/' + encodeURIComponent(id), { method: 'DELETE', keepalive: !!keepalive }).catch(fail);
+    }
+    const st = JSON.stringify(db.settings);
+    if (st !== settingsSnap) { settingsSnap = st; fetch('api/settings', opts(st)).catch(fail); }
+  }
+  window.addEventListener('beforeunload', () => { clearTimeout(saveTimer); if (mode === 'files') flushFiles(true); else save(true); });
 
   function seedSets() { return JSON.parse(JSON.stringify(window.SEED_SETS || [])); }
   function missingSeeds() { return seedSets().filter(s => !db.sets.some(x => x.id === s.id)); }
@@ -54,7 +105,7 @@
   }
 
   // ---------------------------------------------------------------- utils
-  function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 8); }
+  function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 8); } // safe as a file name
   function newCard(front = '', back = '') { return { id: uid(), front, back, starred: false, right: 0, wrong: 0, lastWrong: false }; }
   function newSet(name, cards = []) { const t = Date.now(); return { id: uid(), name, frontLang: 'en', backLang: 'vi', cards, createdAt: t, updatedAt: t }; }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
@@ -144,7 +195,7 @@
     const sets = db.sets.slice().sort((x, y) => y.updatedAt - x.updatedAt);
     for (const id of Array.from(selected)) if (!getSet(id)) selected.delete(id);
     app.innerHTML = `
-      <div class="row"><div><h1>Your sets</h1><div class="muted small">${sets.length} sets · ${sets.reduce((n, s) => n + s.cards.length, 0)} cards · saved in this browser</div></div>
+      <div class="row"><div><h1>Your sets</h1><div class="muted small">${sets.length} sets · ${sets.reduce((n, s) => n + s.cards.length, 0)} cards · ${mode === 'files' ? 'saved to <code>data/sets/*.json</code>' : 'saved in this browser — run <code>python3 server.py</code> to save to JSON files'}</div></div>
         <div class="spacer"></div>
         ${missingSeeds().length ? `<button id="addseeds" title="Re-add the built-in 140A sets you don't have">+ Add built-in sets (${missingSeeds().length})</button>` : ''}
         <button id="backup">⬇ Backup</button>
@@ -724,5 +775,5 @@
     draw();
   }
 
-  route();
+  init().then(route);
 })();

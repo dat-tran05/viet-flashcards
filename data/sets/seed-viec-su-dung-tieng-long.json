@@ -1,0 +1,289 @@
+{
+  "id": "seed-viec-su-dung-tieng-long",
+  "name": "Việc sử dụng tiếng lóng",
+  "frontLang": "en",
+  "backLang": "vi",
+  "createdAt": 1794250804000,
+  "updatedAt": 1794250804000,
+  "cards": [
+    {
+      "id": "seed-viec-su-dung-0",
+      "front": "slang words",
+      "back": "từ lóng / tiếng lóng",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-1",
+      "front": "(v) to expect\n(N) expectation",
+      "back": "kỳ vọng (v)\nkỳ vọng (n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-2",
+      "front": "to orientate/ orientation",
+      "back": "định hướng (n/v)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-3",
+      "front": "stable/ to stabilize",
+      "back": "ổn định (a/v)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-4",
+      "front": "despressed",
+      "back": "trầm cảm (a) - chầm kẽm (lóng)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-5",
+      "front": "bad luck/ unlucky",
+      "back": "xui xẻo (a) - xu cà na (lóng)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-6",
+      "front": "nonsense",
+      "back": "vớ vẩn - bà láp bà xàm (lóng)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-7",
+      "front": "roundabout",
+      "back": "vòng xoay - bùng binh (lóng)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-8",
+      "front": "embarrassed",
+      "back": "xấu hổ (a) - quê (lóng)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-9",
+      "front": "to produce, manufacture",
+      "back": "sản xuất (v)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-10",
+      "front": "an expert",
+      "back": "chuyên gia (n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-11",
+      "front": "to synthesize",
+      "back": "tổng hợp",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-12",
+      "front": "standard/ norm",
+      "back": "chuẩn mực",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-13",
+      "front": "goal, purpose, objective",
+      "back": "mục đích (n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-14",
+      "front": "young people, youth",
+      "back": "giới trẻ (n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-15",
+      "front": "circumstance, scenario, situation",
+      "back": "tình huống (n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-16",
+      "front": "context / setting",
+      "back": "bối cảnh / ngữ cảnh",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-17",
+      "front": "principle, rule",
+      "back": "nguyên tắc (n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-18",
+      "front": "an indispensable part",
+      "back": "một phần không thể thiếu",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-19",
+      "front": "the purity of Vietnamese language",
+      "back": "sự trong sáng của tiếng Việt",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-20",
+      "front": "to keep up with the trends",
+      "back": "bắt kịp xu hướng / bắt trend",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-21",
+      "front": "attitude",
+      "back": "thái độ (n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-22",
+      "front": "secret code",
+      "back": "mật mã (n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-23",
+      "front": "similar to",
+      "back": "tương tự như",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-24",
+      "front": "to imply",
+      "back": "ám chỉ (v)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-25",
+      "front": "without restraint/ control",
+      "back": "thiếu kiểm soát",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-26",
+      "front": "straightforward / frank",
+      "back": "thẳng thắn (a)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-27",
+      "front": "mindfully careful",
+      "back": "thận trọng / cẩn trọng",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-28",
+      "front": "to admit",
+      "back": "thừa nhận (v)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-29",
+      "front": "confused",
+      "back": "bối rối (a)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-viec-su-dung-30",
+      "front": "accidentally",
+      "back": "vô tình (adv)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    }
+  ]
+}

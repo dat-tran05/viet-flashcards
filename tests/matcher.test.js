@@ -105,6 +105,8 @@ t('lí do', 'lý do', 'correct');
 t('tui', 'tuy', 'wrong', null, 'tuy != tui');
 t('kỳ vọng (n)', 'kỳ vọng (v)\nkỳ vọng (n)', 'correct', null, 'typed with POS');
 t('địa phương', 'địa phương (a/n)', 'correct');
+t('địa phương (a/n)', 'địa phương (a/n)', 'correct', null, 'typed verbatim with tag');
+t('minh hoạ (v/n)', 'minh hoạ (v/n)', 'correct');
 t('thiết kế', 'thiết kế (verb/noun)', 'correct');
 t('ở đâu đó', 'ở đâu đó (phrase)', 'correct');
 t('dù là', 'Dù là...', 'correct');

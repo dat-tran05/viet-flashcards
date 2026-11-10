@@ -1,0 +1,190 @@
+{
+  "id": "seed-du-an-chiec-non-ke-chuyen",
+  "name": "Dự án: Chiếc nón kể chuyện",
+  "frontLang": "en",
+  "backLang": "vi",
+  "createdAt": 1794250802000,
+  "updatedAt": 1794250802000,
+  "cards": [
+    {
+      "id": "seed-du-an-chiec--0",
+      "front": "to design; design",
+      "back": "thiết kế (verb/noun)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--1",
+      "front": "outline",
+      "back": "dàn ý",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--2",
+      "front": "to create / draft an outline",
+      "back": "lập dàn ý",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--3",
+      "front": "content",
+      "back": "nội dung",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--4",
+      "front": "to illustrate / illustration",
+      "back": "minh hoạ (v/n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--5",
+      "front": "feedback",
+      "back": "phản hồi",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--6",
+      "front": "to draft",
+      "back": "phác thảo",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--7",
+      "front": "quote / cite / quotation",
+      "back": "trích dẫn (v/n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--8",
+      "front": "deadline, due day",
+      "back": "hạn chót",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--9",
+      "front": "to complete",
+      "back": "hoàn thiện = hoàn thành",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--10",
+      "front": "background music",
+      "back": "nhạc nền",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--11",
+      "front": "to present",
+      "back": "trình bày",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--12",
+      "front": "to evaluate",
+      "back": "đánh giá",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--13",
+      "front": "process",
+      "back": "quá trình",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--14",
+      "front": "organizing committee / production team",
+      "back": "ban tổ chức",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--15",
+      "front": "a performance",
+      "back": "tiết mục / màn biểu diễn / màn trình diễn",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--16",
+      "front": "folklore / folk",
+      "back": "dân gian",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--17",
+      "front": "folk song",
+      "back": "dân ca",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--18",
+      "front": "to inject a fresh perspective (lit. blow a fresh brezze)",
+      "back": "thổi làn gió mới",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-du-an-chiec--19",
+      "front": "teammate",
+      "back": "đồng đội",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    }
+  ]
+}

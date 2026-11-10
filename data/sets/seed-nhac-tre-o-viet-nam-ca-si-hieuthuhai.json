@@ -1,0 +1,235 @@
+{
+  "id": "seed-nhac-tre-o-viet-nam-ca-si-hieuthuhai",
+  "name": "Nhạc trẻ ở Việt Nam - Ca sĩ HIEUTHUHAI",
+  "frontLang": "en",
+  "backLang": "vi",
+  "createdAt": 1794250803000,
+  "updatedAt": 1794250803000,
+  "cards": [
+    {
+      "id": "seed-nhac-tre-o-v-0",
+      "front": "energetic/ full of energy",
+      "back": "giàu năng lượng (a)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-1",
+      "front": "vibrant, bright, radiant",
+      "back": "rực rỡ (a)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-2",
+      "front": "reduplicative words",
+      "back": "từ láy (n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-3",
+      "front": "to try out",
+      "back": "thử sức (v)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-4",
+      "front": "wordplay by reversing sounds in Vietnamese",
+      "back": "nói lái / đọc lái",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-5",
+      "front": "gang",
+      "back": "băng đảng (n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-6",
+      "front": "nerd/ bookworm",
+      "back": "mọt sách (n)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-7",
+      "front": "handsome",
+      "back": "điển trai (n) = đẹp trai",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-8",
+      "front": "to make a mark / to leave an impression",
+      "back": "ghi dấu ấn",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-9",
+      "front": "to release / to launch",
+      "back": "cho ra mắt",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-10",
+      "front": "chart / ranking",
+      "back": "bảng xếp hạng",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-11",
+      "front": "champion / winner",
+      "back": "quán quân",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-12",
+      "front": "dedicated / devoted",
+      "back": "tận tâm / tận tuỵ",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-13",
+      "front": "reputation / fame",
+      "back": "danh tiếng",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-14",
+      "front": "to simplify",
+      "back": "đơn giản hoá (v)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-15",
+      "front": "make it complicated",
+      "back": "phức tạp hoá (v)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-16",
+      "front": "algorithm",
+      "back": "thuật toán",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-17",
+      "front": "digital age",
+      "back": "thời đại số",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-18",
+      "front": "obviously",
+      "back": "lẽ dĩ nhiên",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-19",
+      "front": "to compete / competition",
+      "back": "cạnh tranh (n/v)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-20",
+      "front": "better luck than good",
+      "back": "\"hay không bằng hên\"",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-21",
+      "front": "independent",
+      "back": "tự lập (a)",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-22",
+      "front": "personal image",
+      "back": "hình ảnh cá nhân",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-23",
+      "front": "song (formal)",
+      "back": "ca khúc",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-nhac-tre-o-v-24",
+      "front": "to stand on your own two feet",
+      "back": "tự đứng trên đôi chân của mình",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    }
+  ]
+}

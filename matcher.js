@@ -123,7 +123,8 @@
     const m = /\(([^()]*)\)/.exec(text);
     if (!m) return [text];
     const before = text.slice(0, m.index), after = text.slice(m.index + m[0].length);
-    const options = [''].concat(splitTopLevel(m[1]));
+    // optional: nothing, the whole inside ("v/n"), or any one alternative inside ("v" or "n")
+    const options = Array.from(new Set(['', m[1]].concat(splitTopLevel(m[1]))));
     const out = [];
     for (const opt of options) {
       for (const rest of expandParens(after)) out.push(before + ' ' + opt + ' ' + rest);

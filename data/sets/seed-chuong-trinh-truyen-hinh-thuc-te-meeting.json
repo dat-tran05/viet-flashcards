@@ -1,0 +1,154 @@
+{
+  "id": "seed-chuong-trinh-truyen-hinh-thuc-te-meeting",
+  "name": "Chương trình truyền hình thực tế (Meeting 9.11.2026)",
+  "frontLang": "en",
+  "backLang": "vi",
+  "createdAt": 1794250801000,
+  "updatedAt": 1794250801000,
+  "cards": [
+    {
+      "id": "seed-chuong-trinh-0",
+      "front": "soft resistance",
+      "back": "kháng cự mềm",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-chuong-trinh-1",
+      "front": "political activism",
+      "back": "vận động chính trị",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-chuong-trinh-2",
+      "front": "to assert",
+      "back": "khẳng định",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-chuong-trinh-3",
+      "front": "right",
+      "back": "quyền",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-chuong-trinh-4",
+      "front": "freedom",
+      "back": "tự do",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-chuong-trinh-5",
+      "front": "expression",
+      "back": "biểu đạt",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-chuong-trinh-6",
+      "front": "message",
+      "back": "thông điệp",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-chuong-trinh-7",
+      "front": "harsh/ strong/ fierce",
+      "back": "gay gắt",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-chuong-trinh-8",
+      "front": "gradually",
+      "back": "dần dần",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-chuong-trinh-9",
+      "front": "attitude",
+      "back": "thái độ",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-chuong-trinh-10",
+      "front": "curious",
+      "back": "tò mò",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-chuong-trinh-11",
+      "front": "participate",
+      "back": "tham gia",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-chuong-trinh-12",
+      "front": "indirectly",
+      "back": "không trực tiếp",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-chuong-trinh-13",
+      "front": "norms, standards",
+      "back": "các chuẩn mực",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-chuong-trinh-14",
+      "front": "compromise",
+      "back": "thỏa hiệp",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    },
+    {
+      "id": "seed-chuong-trinh-15",
+      "front": "existing",
+      "back": "hiện có",
+      "starred": false,
+      "right": 0,
+      "wrong": 0,
+      "lastWrong": false
+    }
+  ]
+}
