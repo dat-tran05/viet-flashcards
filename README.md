@@ -30,7 +30,7 @@ Everything is plain JSON. There is no database.
 
 ```
 data/sets/<set-id>.json   one file per set: name, languages, and cards
-                          (front, back, starred, right/wrong counts)
+                          (front, back, starred, right/wrong counts, learn = Learn progress 0-3)
 data/settings.json        your study settings (not committed to git)
 data/deleted/             sets you delete are moved here, never destroyed
 ```
@@ -47,7 +47,13 @@ data/deleted/             sets you delete are moved here, never destroyed
 - **Sets**: create, rename, delete (with undo), combine several sets into a new one, and search across all your cards. The search ignores tone marks.
 - **Editor**: front and back side by side, with every change saved as you type. Press Tab in the last field to add a new card. You can star cards, swap the front and back of every card, and see right/wrong counts for each card.
 - **Flashcards**: click or press Space to flip, ←/→ to move, `1` for still learning and `2` for know it. At the end you can restudy only the cards you were still learning.
-- **Write**: you type each answer, Learn-style. Cards you miss come back in later rounds until you get every one right.
+- **Learn** works like Quizlet's Learn. Each card works its way up through the formats you turn on: **Flashcard** (reveal it, then say *Got it* or *Still learning*), then **Multiple choice** (off by default), then **Written**.
+  - Getting a card right moves it up a format, and missing it drops it back one. Missed cards also come back at the end of the same round.
+  - A card is *mastered* once you pass the last format. The bar shows how many cards are not studied, learning and mastered.
+  - Rounds are 7 cards by default (you can change this). Cards you've started come first, so you finish them before new ones appear.
+  - Progress is saved in each card (`learn` in the JSON file), so you can stop any time and pick up later. **Reset progress** starts over.
+  - Keys: `Space` reveals, `1`/`2` for still learning / got it, `1`–`4` picks a multiple-choice answer, `Enter` checks or continues, `O` means "I was right".
+- **Write**: you type each answer for every card in the set. Cards you miss come back in later rounds until you get every one right.
   - `Enter` checks your answer and moves on.
   - `O` means "I was right" (it overrides a wrong grade).
   - `E` lets you edit a card in the middle of a quiz. The card is fixed everywhere and your answer is checked again.

@@ -44,7 +44,7 @@
   }
   function normalizeSet(s) {
     return Object.assign({ frontLang: 'en', backLang: 'vi', createdAt: Date.now(), updatedAt: Date.now() }, s, {
-      cards: (s.cards || []).map(c => Object.assign({ id: uid(), front: '', back: '', starred: false, right: 0, wrong: 0, lastWrong: false }, c)),
+      cards: (s.cards || []).map(c => Object.assign({ id: uid(), front: '', back: '', starred: false, right: 0, wrong: 0, lastWrong: false, learn: 0 }, c)),
     });
   }
   function loadLocal() {
@@ -181,6 +181,7 @@
     if (view === 'study') {
       const ids = (b || '').split(',').filter(Boolean);
       if (a === 'flash') return renderFlash(ids);
+      if (a === 'learn') return renderLearn(ids);
       if (a === 'write') return renderWrite(ids);
       if (a === 'test') return renderTest(ids);
     }
@@ -256,7 +257,7 @@
       <input type="checkbox" class="pick" ${selected.has(s.id) ? 'checked' : ''} title="Select to study together">
       <h3>${esc(s.name)}</h3>
       <div class="muted small">${s.cards.length} cards${starred ? ` · ★ ${starred}` : ''}${missed ? ` · ${missed} missed` : ''}</div>
-      <div class="actions"><button data-act="flash">Flashcards</button><button data-act="write">Write</button><button data-act="test">Test</button></div>
+      <div class="actions"><button data-act="flash">Flashcards</button><button data-act="learn">Learn</button><button data-act="write">Write</button><button data-act="test">Test</button></div>
     </div>`;
   }
   function renderSelbar() {
@@ -265,6 +266,7 @@
     const ids = Array.from(selected), n = ids.reduce((k, id) => k + (getSet(id)?.cards.length || 0), 0);
     el.innerHTML = `<div class="selbar"><span>${ids.length} sets · ${n} cards</span>
       <a class="btn" href="${studyLink('flash', ids)}" style="color:inherit;background:transparent">Flashcards</a>
+      <a class="btn" href="${studyLink('learn', ids)}" style="color:inherit;background:transparent">Learn</a>
       <a class="btn" href="${studyLink('write', ids)}" style="color:inherit;background:transparent">Write</a>
       <a class="btn" href="${studyLink('test', ids)}" style="color:inherit;background:transparent">Test</a>
       <button id="merge">Combine into new set</button><button id="clearsel">✕</button></div>`;
@@ -287,6 +289,7 @@
       <div class="row" style="margin:10px 0 6px"><input type="text" id="setname" value="${esc(set.name)}" style="font-size:22px;font-weight:700;flex:1;min-width:220px"></div>
       <div class="row" style="margin-bottom:16px">
         <a class="btn primary" href="${studyLink('flash', [id])}">Flashcards</a>
+        <a class="btn primary" href="${studyLink('learn', [id])}">Learn</a>
         <a class="btn primary" href="${studyLink('write', [id])}">Write</a>
         <a class="btn primary" href="${studyLink('test', [id])}">Test</a>
         <div class="spacer"></div>
@@ -459,7 +462,7 @@
   function studyHeader(ids, mode) {
     const names = ids.map(id => getSet(id)?.name).filter(Boolean);
     const back = ids.length === 1 ? '#/set/' + ids[0] : '#/';
-    const modes = { flash: 'Flashcards', write: 'Write', test: 'Test' };
+    const modes = { flash: 'Flashcards', learn: 'Learn', write: 'Write', test: 'Test' };
     return `<div class="study-head"><a href="${back}">← ${esc(names.length === 1 ? names[0] : names.length + ' sets')}</a>
       <div class="spacer"></div>${Object.entries(modes).map(([k, v]) => `<a class="btn ${k === mode ? 'primary' : ''}" href="${studyLink(k, ids)}">${v}</a>`).join('')}</div>`;
   }
@@ -524,6 +527,257 @@
     };
     document.addEventListener('keydown', onKey);
     cleanup = () => document.removeEventListener('keydown', onKey);
+    draw();
+  }
+
+  // ---------------------------------------------------------------- learn (Quizlet-style progressive)
+  // Each card climbs through the formats you enable, in this order:
+  //   flashcard (reveal + "got it")  ->  multiple choice  ->  written.
+  // Right answer: the card moves up to that format's level. Wrong: it drops back one format.
+  // A card is mastered once it passes the last enabled format. card.learn stores the level,
+  // so progress is saved in the set's JSON file and resumes next time.
+  const LEARN_LEVEL = { flash: 1, mc: 2, written: 3 };
+  const LEARN_NAMES = { flash: 'Flashcard', mc: 'Multiple choice', written: 'Written' };
+  function learnFormats() {
+    const f = Object.assign({ flash: true, mc: false, written: true }, db.settings.learnFormats || {});
+    const list = ['flash', 'mc', 'written'].filter(k => f[k]);
+    return list.length ? list : ['written'];
+  }
+  function distractors(item, pool, answerLang, answer) {
+    const seen = new Set([M.clean(answer)]), out = [];
+    for (const x of shuffle(pool)) {
+      if (x.card.id === item.card.id) continue;
+      const o = orient(x.set, x.card, answerLang);
+      if (o.answerLang !== answerLang || seen.has(M.clean(o.answer))) continue;
+      seen.add(M.clean(o.answer)); out.push(o.answer);
+    }
+    return out;
+  }
+
+  function renderLearn(ids) {
+    const pool = sessionItems(ids);
+    const formats = learnFormats();
+    const target = LEARN_LEVEL[formats[formats.length - 1]];
+    const level = c => c.learn || 0;
+    const isMastered = c => level(c) >= target;
+    const nextFormat = c => formats.find(f => LEARN_LEVEL[f] > level(c)) || formats[formats.length - 1];
+    const roundSize = +db.settings.learnRoundSize || 7;
+
+    let round = 0, queue = [], qi = 0, phase = 'ask', cur = null, timer = null, roundLog = [];
+
+    function counts() {
+      let n = 0, l = 0, m = 0;
+      for (const it of pool) { if (isMastered(it.card)) m++; else if (level(it.card) > 0) l++; else n++; }
+      return { n, l, m };
+    }
+    function startRound() {
+      const todo = pool.filter(it => !isMastered(it.card));
+      if (!todo.length) { queue = []; return; }
+      // cards already in progress first (so they get finished), then new ones
+      const learning = todo.filter(it => level(it.card) > 0), fresh = todo.filter(it => level(it.card) === 0);
+      queue = learning.concat(fresh).slice(0, roundSize).map(it => ({ it, retry: false }));
+      queue = shuffle(queue);
+      qi = 0; round++; roundLog = []; phase = 'ask';
+    }
+    function prepare() {
+      const q = queue[qi];
+      const fmt = nextFormat(q.it.card);
+      const o = orient(q.it.set, q.it.card, db.settings.answerLang);
+      cur = { q, fmt, o, revealed: false, typed: '', choice: null, r: null, overridden: false };
+      if (fmt === 'mc') {
+        const d = distractors(q.it, pool, o.answerLang, o.answer).slice(0, 3);
+        if (d.length < 1) cur.fmt = formats.includes('written') ? 'written' : 'flash';
+        else cur.choices = shuffle([o.answer].concat(d));
+      }
+    }
+
+    function progressHtml() {
+      const c = counts(), total = pool.length || 1;
+      return `<div class="row small" style="margin-top:4px">
+          <span><span class="dot new"></span>Not studied <b>${c.n}</b></span>
+          <span><span class="dot learning"></span>Learning <b>${c.l}</b></span>
+          <span><span class="dot mastered"></span>Mastered <b>${c.m}</b></span>
+          <div class="spacer"></div><span class="muted">${round ? `Round ${round}${qi < queue.length ? ` · ${qi + 1}/${queue.length}` : ''}` : ''}</span></div>
+        <div class="progress seg"><div class="mastered" style="width:${c.m / total * 100}%"></div><div class="learning" style="width:${c.l / total * 100}%"></div></div>`;
+    }
+    function learnOptionsHtml() {
+      const f = Object.assign({ flash: true, mc: false, written: true }, db.settings.learnFormats || {});
+      return `<div class="panel options" style="margin-top:8px">
+        <b class="small">Learn with</b>
+        ${['flash', 'mc', 'written'].map(k => `<label class="check"><input type="checkbox" data-lf="${k}" ${f[k] ? 'checked' : ''}> ${LEARN_NAMES[k]}${k === 'flash' ? 's' : ''}</label>`).join('')}
+        <label>Round size <select id="lrs">${[5, 7, 10, 15, 20].map(n => `<option ${n === roundSize ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
+        <div class="spacer"></div><button id="lreset" title="Set every card in this session back to “not studied”">Reset progress</button>
+      </div>`;
+    }
+
+    function draw() {
+      clearTimeout(timer);
+      const head = studyHeader(ids, 'learn') + optionsHtml({ checking: true, advance: true }) + learnOptionsHtml();
+      if (!pool.length) { app.innerHTML = head + noCardsHtml(); bind(); return; }
+      if (!queue.length || qi >= queue.length) return endScreen(head);
+      const { fmt, o, q } = cur;
+      let body = '';
+      if (fmt === 'flash') {
+        body = cur.revealed
+          ? `<div class="reveal" lang="${langAttr(o.answerLang)}"><span class="lang">${LANGS[o.answerLang]}</span>${esc(o.answer)}</div>
+             <div class="row" style="justify-content:center;margin-top:14px">
+               <button id="fl-no">✗ Still learning <kbd>1</kbd></button><button class="primary" id="fl-yes">✓ Got it <kbd>2</kbd></button></div>`
+          : `<div class="row" style="justify-content:center"><button class="primary" id="fl-reveal">Show answer <kbd>Space</kbd></button></div>`;
+      } else if (fmt === 'mc') {
+        body = `<div class="choices">${cur.choices.map((c, k) => {
+          let st = '';
+          if (phase === 'feedback') st = c === o.answer ? 'right' : cur.choice === k ? 'bad' : '';
+          return `<button class="choice ${st}" data-k="${k}" ${phase === 'feedback' ? 'disabled' : ''} lang="${langAttr(o.answerLang)}"><kbd>${k + 1}</kbd> ${esc(c)}</button>`;
+        }).join('')}</div>`;
+        if (phase === 'feedback') body += mcFeedbackHtml();
+      } else {
+        body = `<form id="f" autocomplete="off"><input class="answer-input" type="text" id="ans" lang="${langAttr(o.answerLang)}" placeholder="Type the ${LANGS[o.answerLang]} answer…" ${phase !== 'ask' ? 'disabled' : ''} value="${esc(cur.typed)}" autocapitalize="off" spellcheck="false"></form>
+          ${phase === 'ask' ? `<div class="row" style="margin-top:10px"><button class="primary" id="submit">Check <kbd>Enter</kbd></button><button id="dunno">Don't know</button></div>` : writtenFeedbackHtml()}`;
+      }
+      const stage = formats.map(f => `<span class="stage ${f === fmt ? 'on' : LEARN_LEVEL[f] <= level(q.it.card) ? 'done' : ''}">${LEARN_NAMES[f]}</span>`).join('<span class="muted">›</span>');
+      app.innerHTML = head + progressHtml() + `
+        <div class="panel">
+          <div class="row small"><span class="stages">${stage}</span><div class="spacer"></div>${q.retry ? '<span class="muted">Let’s try that again</span>' : ''}
+            <button class="ghost star ${q.it.card.starred ? 'on' : ''}" id="star" title="Star">★</button></div>
+          <div class="prompt" lang="${langAttr(o.promptLang)}"><span class="lang">${LANGS[o.promptLang]}${fmt === 'flash' ? '' : ' → ' + LANGS[o.answerLang]}</span>${esc(o.prompt)}</div>
+          ${body}
+        </div>`;
+      bind();
+      if (fmt === 'written' && phase === 'ask') $('#ans').focus();
+      if (phase === 'feedback') {
+        $('#continue')?.focus();
+        if (cur.r && cur.r.status === 'correct' && db.settings.autoAdvance && !cur.overridden) timer = setTimeout(next, 900);
+      }
+    }
+    function mcFeedbackHtml() {
+      const ok = cur.r.status === 'correct';
+      return `<div class="feedback ${ok ? 'correct' : 'wrong'}"><div class="title">${ok ? 'Correct!' : 'Not quite'}</div>
+        ${ok ? '' : `<div class="body">Answer: <b>${esc(cur.o.answer)}</b></div>`}
+        <div class="row" style="margin-top:10px"><button class="primary" id="continue">Continue <kbd>Enter</kbd></button></div></div>`;
+    }
+    function writtenFeedbackHtml() {
+      const r = cur.r, alts = r.alternatives;
+      const titles = { correct: cur.overridden ? 'Marked correct' : 'Correct!', almost: 'Almost!', wrong: 'Not quite', empty: "Here's the answer" };
+      return `<div class="feedback ${r.status}"><div class="title">${titles[r.status]}</div>
+        ${r.note ? `<div>${esc(r.note)}</div>` : ''}
+        <div class="body">
+          ${r.status !== 'correct' && cur.typed ? `<div class="small muted">You wrote</div><div class="answer">${r.status === 'almost' ? diffHtml(cur.typed, pickDisplay(alts, r.matched)) : esc(cur.typed)}</div>` : ''}
+          <div class="small muted" style="margin-top:6px">Answer</div><div class="answer" lang="${langAttr(cur.o.answerLang)}">${esc(cur.o.answer)}</div>
+          ${alts.length > 1 ? `<div class="small muted">Accepted answers: ${alts.map(esc).join(' · ')}</div>` : ''}
+        </div>
+        <div class="row" style="margin-top:12px"><button class="primary" id="continue">Continue <kbd>Enter</kbd></button>
+          ${r.status !== 'correct' && cur.typed ? '<button id="override">I was right <kbd>O</kbd></button>' : ''}</div></div>`;
+    }
+
+    // ---- grading
+    function grade(ok) {
+      const c = cur.q.it.card, f = cur.fmt;
+      record(c, ok);
+      if (ok) c.learn = Math.max(level(c), LEARN_LEVEL[f]);
+      else {
+        // drop back to the format before this one (or "not studied")
+        const i = formats.indexOf(f);
+        c.learn = Math.min(level(c), i > 0 ? LEARN_LEVEL[formats[i - 1]] : 0);
+        if (!cur.q.retry) queue.push({ it: cur.q.it, retry: true }); // see it again at the end of this round
+      }
+      touch(cur.q.it.set);
+      roundLog.push({ it: cur.q.it, ok, fmt: f });
+    }
+    function selfGrade(ok) { grade(ok); next(); }
+    function pickChoice(k) {
+      if (phase !== 'ask') return;
+      cur.choice = k;
+      cur.r = { status: cur.choices[k] === cur.o.answer ? 'correct' : 'wrong' };
+      grade(cur.r.status === 'correct'); phase = 'feedback'; draw();
+    }
+    function submitWritten(typed) {
+      if (phase !== 'ask') return;
+      cur.typed = typed;
+      cur.r = M.check(typed, cur.o.answer, matchOpts(cur.o.answerLang));
+      grade(cur.r.status === 'correct'); phase = 'feedback'; draw();
+    }
+    function override() {
+      const c = cur.q.it.card;
+      c.wrong = Math.max(0, c.wrong - 1);
+      // undo the drop + retry, then count it as right
+      queue = queue.filter((x, i) => i <= qi || !(x.retry && x.it === cur.q.it));
+      roundLog.pop();
+      grade(true);
+      cur.r = Object.assign({}, cur.r, { status: 'correct', note: '' }); cur.overridden = true; draw();
+    }
+    function next() {
+      clearTimeout(timer);
+      qi++; phase = 'ask';
+      if (qi < queue.length) prepare();
+      draw();
+    }
+
+    function endScreen(head) {
+      const c = counts();
+      if (!c.n && !c.l) {
+        app.innerHTML = head + progressHtml() + `<div class="panel empty-state"><h2>🎉 You've mastered all ${pool.length} cards</h2>
+          <p class="muted">Every card passed: ${formats.map(f => LEARN_NAMES[f]).join(' → ')}.</p>
+          <div class="row" style="justify-content:center"><a class="btn primary" href="${studyLink('test', ids)}">Take a test →</a>
+            <button id="again">Reset progress &amp; learn again</button></div></div>`;
+        bind(); $('#again').onclick = resetProgress; return;
+      }
+      const right = roundLog.filter(x => x.ok).length;
+      const seen = new Map(); roundLog.forEach(x => seen.set(x.it.card.id, x.it));
+      app.innerHTML = head + progressHtml() + `<div class="panel">
+        <h2 style="margin-top:0">${round ? `Round ${round} done — ${right}/${roundLog.length} right` : 'Ready to learn'}</h2>
+        ${round ? `<div class="round-list">${Array.from(seen.values()).map(it => {
+          const o = orient(it.set, it.card, db.settings.answerLang === 'mixed' ? 'vi' : db.settings.answerLang);
+          const st = isMastered(it.card) ? 'mastered' : level(it.card) > 0 ? 'learning' : 'new';
+          return `<div class="rl"><span class="dot ${st}"></span><span>${esc(o.prompt)}</span><b lang="${langAttr(o.answerLang)}">${esc(o.answer)}</b></div>`;
+        }).join('')}</div>` : `<p class="muted">${pool.length} cards · ${roundSize} per round · ${formats.map(f => LEARN_NAMES[f]).join(' → ')}. Progress is saved, so you can stop any time.</p>`}
+        <div class="row" style="margin-top:14px"><button class="primary" id="go">${round ? 'Next round' : 'Start'} <kbd>Enter</kbd></button></div></div>`;
+      bind();
+      $('#go').onclick = () => { startRound(); if (queue.length) prepare(); draw(); };
+      $('#go').focus();
+    }
+    function resetProgress() {
+      if (!confirm('Reset Learn progress for these cards?')) return;
+      const touched = new Set();
+      pool.forEach(it => { it.card.learn = 0; touched.add(it.set); });
+      touched.forEach(touch);
+      renderLearn(ids);
+    }
+
+    function bind() {
+      bindOptions(() => renderLearn(ids), ['ignoreTones', 'typoTolerance', 'optionalClassifiers', 'autoAdvance']);
+      $$('[data-lf]').forEach(el => el.onchange = () => {
+        db.settings.learnFormats = Object.assign({ flash: true, mc: false, written: true }, db.settings.learnFormats || {}, { [el.dataset.lf]: el.checked });
+        save(); renderLearn(ids);
+      });
+      $('#lrs') && ($('#lrs').onchange = e => { db.settings.learnRoundSize = +e.target.value; save(); renderLearn(ids); });
+      $('#lreset') && ($('#lreset').onclick = resetProgress);
+      $('#star') && ($('#star').onclick = () => { const c = cur.q.it.card; c.starred = !c.starred; touch(cur.q.it.set); $('#star').classList.toggle('on', c.starred); });
+      $('#fl-reveal') && ($('#fl-reveal').onclick = () => { cur.revealed = true; draw(); });
+      $('#fl-yes') && ($('#fl-yes').onclick = () => selfGrade(true));
+      $('#fl-no') && ($('#fl-no').onclick = () => selfGrade(false));
+      $$('.choice[data-k]').forEach(b => b.onclick = () => pickChoice(+b.dataset.k));
+      const f = $('#f'); if (f) f.onsubmit = e => { e.preventDefault(); submitWritten($('#ans').value); };
+      $('#submit') && ($('#submit').onclick = () => submitWritten($('#ans').value));
+      $('#dunno') && ($('#dunno').onclick = () => submitWritten(''));
+      $('#continue') && ($('#continue').onclick = next);
+      $('#override') && ($('#override').onclick = override);
+    }
+    const onKey = e => {
+      if (e.target.matches('textarea, input[type=text]:not([disabled]), input[type=number], select')) return;
+      if (!cur || qi >= queue.length) return;
+      if (cur.fmt === 'flash' && phase === 'ask') {
+        if (e.key === ' ' && !cur.revealed) { e.preventDefault(); cur.revealed = true; draw(); }
+        else if (cur.revealed && e.key === '1') selfGrade(false);
+        else if (cur.revealed && (e.key === '2' || e.key === ' ')) { e.preventDefault(); selfGrade(true); }
+      } else if (cur.fmt === 'mc' && phase === 'ask' && /^[1-4]$/.test(e.key) && cur.choices[+e.key - 1] !== undefined) {
+        pickChoice(+e.key - 1);
+      } else if (phase === 'feedback') {
+        if (e.key === 'Enter') { e.preventDefault(); next(); }
+        else if (e.key.toLowerCase() === 'o' && $('#override')) override();
+      }
+    };
+    document.addEventListener('keydown', onKey);
+    cleanup = () => { document.removeEventListener('keydown', onKey); clearTimeout(timer); };
     draw();
   }
 

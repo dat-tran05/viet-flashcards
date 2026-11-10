@@ -22,7 +22,7 @@ def main():
             s['id'] = name[:-5]
             # seeds start with clean stats
             for c in s.get('cards', []):
-                c.update(right=0, wrong=0, lastWrong=False)
+                c.update(right=0, wrong=0, lastWrong=False, learn=0)
             sets.append(s)
     sets.sort(key=lambda s: -s.get('updatedAt', 0))
     with open(os.path.join(ROOT, 'seed.js'), 'w', encoding='utf-8') as fh:

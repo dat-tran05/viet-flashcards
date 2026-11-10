@@ -16,7 +16,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-1",
@@ -25,7 +26,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-2",
@@ -34,7 +36,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-3",
@@ -43,7 +46,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-4",
@@ -52,7 +56,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-5",
@@ -61,7 +66,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-6",
@@ -70,7 +76,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-7",
@@ -79,7 +86,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-8",
@@ -88,7 +96,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-9",
@@ -97,7 +106,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-10",
@@ -106,7 +116,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-11",
@@ -115,7 +126,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-12",
@@ -124,7 +136,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-13",
@@ -133,7 +146,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-14",
@@ -142,7 +156,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-15",
@@ -151,7 +166,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-16",
@@ -160,7 +176,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-17",
@@ -169,7 +186,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-18",
@@ -178,7 +196,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-tieng-viet-n-19",
@@ -187,7 +206,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    }
   ]
  },
@@ -206,7 +226,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-1",
@@ -215,7 +236,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-2",
@@ -224,7 +246,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-3",
@@ -233,7 +256,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-4",
@@ -242,7 +266,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-5",
@@ -251,7 +276,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-6",
@@ -260,7 +286,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-7",
@@ -269,7 +296,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-8",
@@ -278,7 +306,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-9",
@@ -287,7 +316,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-10",
@@ -296,7 +326,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-11",
@@ -305,7 +336,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-12",
@@ -314,7 +346,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-13",
@@ -323,7 +356,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-14",
@@ -332,7 +366,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-15",
@@ -341,7 +376,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-16",
@@ -350,7 +386,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-17",
@@ -359,7 +396,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-18",
@@ -368,7 +406,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-19",
@@ -377,7 +416,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-20",
@@ -386,7 +426,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-21",
@@ -395,7 +436,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-22",
@@ -404,7 +446,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-23",
@@ -413,7 +456,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-24",
@@ -422,7 +466,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-25",
@@ -431,7 +476,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-26",
@@ -440,7 +486,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-27",
@@ -449,7 +496,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-28",
@@ -458,7 +506,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-29",
@@ -467,7 +516,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-viec-su-dung-30",
@@ -476,7 +526,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    }
   ]
  },
@@ -495,7 +546,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-1",
@@ -504,7 +556,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-2",
@@ -513,7 +566,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-3",
@@ -522,7 +576,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-4",
@@ -531,7 +586,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-5",
@@ -540,7 +596,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-6",
@@ -549,7 +606,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-7",
@@ -558,7 +616,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-8",
@@ -567,7 +626,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-9",
@@ -576,7 +636,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-10",
@@ -585,7 +646,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-11",
@@ -594,7 +656,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-12",
@@ -603,7 +666,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-13",
@@ -612,7 +676,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-14",
@@ -621,7 +686,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-15",
@@ -630,7 +696,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-16",
@@ -639,7 +706,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-17",
@@ -648,7 +716,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-18",
@@ -657,7 +726,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-19",
@@ -666,7 +736,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-20",
@@ -675,7 +746,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-21",
@@ -684,7 +756,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-22",
@@ -693,7 +766,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-23",
@@ -702,7 +776,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-nhac-tre-o-v-24",
@@ -711,7 +786,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    }
   ]
  },
@@ -730,7 +806,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--1",
@@ -739,7 +816,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--2",
@@ -748,7 +826,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--3",
@@ -757,7 +836,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--4",
@@ -766,7 +846,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--5",
@@ -775,7 +856,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--6",
@@ -784,7 +866,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--7",
@@ -793,7 +876,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--8",
@@ -802,7 +886,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--9",
@@ -811,7 +896,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--10",
@@ -820,7 +906,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--11",
@@ -829,7 +916,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--12",
@@ -838,7 +926,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--13",
@@ -847,7 +936,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--14",
@@ -856,7 +946,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--15",
@@ -865,7 +956,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--16",
@@ -874,7 +966,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--17",
@@ -883,7 +976,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--18",
@@ -892,7 +986,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-du-an-chiec--19",
@@ -901,7 +996,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    }
   ]
  },
@@ -920,7 +1016,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-chuong-trinh-1",
@@ -929,7 +1026,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-chuong-trinh-2",
@@ -938,7 +1036,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-chuong-trinh-3",
@@ -947,7 +1046,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-chuong-trinh-4",
@@ -956,7 +1056,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-chuong-trinh-5",
@@ -965,7 +1066,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-chuong-trinh-6",
@@ -974,7 +1076,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-chuong-trinh-7",
@@ -983,7 +1086,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-chuong-trinh-8",
@@ -992,7 +1096,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-chuong-trinh-9",
@@ -1001,7 +1106,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-chuong-trinh-10",
@@ -1010,7 +1116,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-chuong-trinh-11",
@@ -1019,7 +1126,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-chuong-trinh-12",
@@ -1028,7 +1136,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-chuong-trinh-13",
@@ -1037,7 +1146,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-chuong-trinh-14",
@@ -1046,7 +1156,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    },
    {
     "id": "seed-chuong-trinh-15",
@@ -1055,7 +1166,8 @@ window.SEED_SETS = [
     "starred": false,
     "right": 0,
     "wrong": 0,
-    "lastWrong": false
+    "lastWrong": false,
+    "learn": 0
    }
   ]
  }

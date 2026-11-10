@@ -122,3 +122,20 @@ kbd { font: 12px ui-monospace, monospace; background: var(--accent-2); border-ra
   .choices, .edit-inline { grid-template-columns: 1fr; }
   .flash-face { font-size: 22px; }
 }
+
+/* learn */
+.progress.seg { display: flex; }
+.progress.seg .mastered { background: var(--good); }
+.progress.seg .learning { background: var(--warn); }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; background: var(--line); vertical-align: middle; }
+.dot.learning { background: var(--warn); }
+.dot.mastered { background: var(--good); }
+.stages { display: inline-flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.stage { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--accent-2); color: var(--muted); }
+.stage.on { background: var(--accent); color: #fff; font-weight: 700; }
+.stage.done { color: var(--good); }
+.reveal { text-align: center; font-size: 26px; font-weight: 600; padding: 18px; border-top: 1px dashed var(--line); white-space: pre-wrap; }
+.reveal .lang { display: block; font-size: 12px; font-weight: 400; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px; }
+.round-list .rl { display: grid; grid-template-columns: 16px 1fr 1fr; gap: 10px; padding: 6px 0; border-bottom: 1px solid var(--line); align-items: center; }
+.choice kbd { margin-right: 4px; }
+button.primary kbd, .btn.primary kbd { background: rgba(255, 255, 255, .25); color: #fff; }
